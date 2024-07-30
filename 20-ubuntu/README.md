@@ -1,6 +1,8 @@
 # Ubuntu GitHub SSH
 Creates an image to be able to edit files with nvim and make contributions to your GitHub.  
 
+![dev.sh exec output](images/dev-sh.png)
+
 Works plug and play with Ubuntu and MacOS.
 This image just gets me a read to go enviroment with the minimum resorces I need to start coding within a Ubuntu container using an bash interactive section.  
 To profit from this repo you should be apt to develop directly from the cli.  
