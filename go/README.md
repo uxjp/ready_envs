@@ -1,9 +1,9 @@
-# Ubuntu GitHub SSH
-Creates an image to be able to edit files with nvim and make contributions to your GitHub.  
+# Go Env
+Creates an image to be able to edit files with nvim and make contributions to your GitHub, and has Golang ready for development.  
 
 ![dev.sh exec output](images/dev-sh.png)
 
-Works plug and play with Ubuntu and MacOS.
+Works plug and play with MacOS, should work also in Ubuntu, but I didn't test it.  
 This image just gets me a read to go enviroment with the minimum resorces I need to start coding within a Ubuntu container using an bash interactive section.  
 To profit from this repo you should be apt to develop directly from the cli.  
 It uses a doppler.com to store sensitive data necessary to access GitHub, removing the use of .env files to store environment variables.
