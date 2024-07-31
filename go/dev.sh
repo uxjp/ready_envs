@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script for start developping from within a container ready to edit files and access GitHub
 
-NAME=github-ssh
+NAME=go-ready-env
 
 ./auth-doppler.sh
 ./build-image.sh $NAME

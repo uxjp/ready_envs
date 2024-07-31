@@ -1,4 +1,4 @@
-docker run -it --name github-ssh github-ssh bash -c "
+docker run -it --name go-ready-env go-ready-env bash -c "
 
   # Create the .ssh directory if it doesn't exist
   mkdir -p ~/.ssh
