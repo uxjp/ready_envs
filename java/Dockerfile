@@ -2,18 +2,16 @@ FROM ubuntu:24.04
 
 RUN apt-get update && apt-get install -y \
     git \
-    wget \
+    curl \
+    unzip \
     openssh-client
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y neovim
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    neovim \
+    openjdk-17-jdk
 
-# Install Golang
-RUN wget https://golang.org/dl/go1.22.5.linux-arm64.tar.gz && \
-    tar -C /usr/local -xzf go1.22.5.linux-arm64.tar.gz && \
-    rm go1.22.5.linux-arm64.tar.gz
+RUN apt-get install -y maven
 
-# Set up Golang environment
-ENV PATH="/usr/local/go/bin:${PATH}"
 
 RUN echo 'parse_git_branch() { git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ (\1)/"; }' >> /root/.bashrc && \
     echo 'export PS1="\[\033[01;32m\]@\u\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\]\[\033[01;36m\]$(parse_git_branch)\[\033[00m\]\n|> "' \

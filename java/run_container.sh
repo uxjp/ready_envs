@@ -1,4 +1,9 @@
-docker run -it --name go-ready-env go-ready-env bash -c "
+#!/bin/bash
+
+CONTAINER_NAME=$1
+BASE_IMAGE=$2
+
+docker run -it --name $CONTAINER_NAME $BASE_IMAGE bash -c "
 
   # Create the .ssh directory if it doesn't exist
   mkdir -p ~/.ssh

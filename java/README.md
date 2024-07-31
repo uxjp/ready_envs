@@ -1,5 +1,5 @@
-# Go Env
-Creates an image to be able to edit files with nvim and make contributions to your GitHub, and has Golang ready for development.  
+# Java Env
+Creates an image to be able to edit files with nvim and make contributions to your GitHub, and has JDK ready for development.  
 
 ![dev.sh exec output](images/dev-sh.png)
 
