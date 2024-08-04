@@ -2,6 +2,8 @@
 # Script for start developping from within a container ready to edit files and access GitHub
 
 NAME=java-ready-env
+HOST_PORT=8080
+CONTAINER_PORT=8080  #default value for Spring-Boot apps
 
 ./auth-doppler.sh
 ./build-image.sh $NAME
@@ -12,4 +14,4 @@ if [ "$(docker ps -aq -f name=$NAME)" ]; then
     docker rm $NAME
 fi
 
-doppler run --command="./run_container.sh $NAME $NAME"
+doppler run --command="./run_container.sh $NAME $NAME $HOST_PORT $CONTAINER_PORT"
