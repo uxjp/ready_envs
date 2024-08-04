@@ -1,6 +1,7 @@
 #!/bin/bash
 
 TARGET_NETWORK_NAME=${1:-postgres}
+
 if docker network ls --format '{{.Name}}' | grep -wp "$TARGET_NETWORK_NAME"; then
   echo "Network exists"
 else

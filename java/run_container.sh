@@ -4,8 +4,9 @@ CONTAINER_NAME=$1
 BASE_IMAGE=$2
 HOST_PORT=$3
 CONTAINER_PORT=$4
+NETWORK=$5
 
-docker run -it -p $HOST_PORT:$CONTAINER_PORT --name $CONTAINER_NAME $BASE_IMAGE bash -c "
+docker run -it --network $NETWORK -p $HOST_PORT:$CONTAINER_PORT --name $CONTAINER_NAME $BASE_IMAGE bash -c "
 
   # Create the .ssh directory if it doesn't exist
   mkdir -p ~/.ssh

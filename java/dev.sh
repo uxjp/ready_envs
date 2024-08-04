@@ -4,6 +4,7 @@
 NAME=java-ready-env
 HOST_PORT=8080
 CONTAINER_PORT=8080  #default value for Spring-Boot apps
+NETWORK=postgres
 
 ./auth-doppler.sh
 ./build-image.sh $NAME
@@ -14,4 +15,4 @@ if [ "$(docker ps -aq -f name=$NAME)" ]; then
     docker rm $NAME
 fi
 
-doppler run --command="./run_container.sh $NAME $NAME $HOST_PORT $CONTAINER_PORT"
+doppler run --command="./run_container.sh $NAME $NAME $HOST_PORT $CONTAINER_PORT $NETWORK"
