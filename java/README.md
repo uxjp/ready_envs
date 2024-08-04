@@ -14,6 +14,23 @@ It uses a doppler.com to store sensitive data necessary to access GitHub, removi
 ```
 And feed your Doppler.com Access token. If your credentials and doppler secrets are configured as explained below your container will be read to pull and push from your github.
 
+## Testing Port Accessability
+
+Inside the container, get a Spring-Boot app and run it:  
+```bash
+git clone git@github.com:uxjp/spring-boot-mvn-simple-server.git
+cd spring-boot-mvn-simple-server
+mvn spring-boot:run
+```
+
+On the host use a client to request to the app now running:
+```bash
+curl http://0.0.0.0:8080/hello
+
+<p>Hello from Spring Boot!<p>%
+
+```
+
 ## Dependencies
 - Doppler.com account
 - Github SSH Key
