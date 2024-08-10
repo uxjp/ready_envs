@@ -1,8 +1,8 @@
 #!/bin/bash
 # Script for start developping from within a container ready to edit files and access GitHub
 
-NAME=java-ready-env
-HOST_PORT=8080
+NAME=${1:-java-ready-env}
+HOST_PORT=${2:-8080}
 CONTAINER_PORT=8080  #default value for Spring-Boot apps
 NETWORK=postgres
 DB_CONTAINER_NAME=postgres-db

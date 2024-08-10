@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTMX Hello World</title>
+  <script src="https://unpkg.com/htmx.org@1.6.0/dist/htmx.min.js"></script>
+</head>
+<body>
+  <button hx-get="http://localhost:8080/hello" hx-target="#response">Load Data</button>
+  <div id="response"></div>
+</body>
+</html>

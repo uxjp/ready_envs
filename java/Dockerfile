@@ -1,5 +1,7 @@
 FROM ubuntu:24.04
 
+COPY spring-boot-app-db-connection /app/spring-boot-app-db-connection
+
 RUN apt-get update && apt-get install -y \
     git \
     curl \
