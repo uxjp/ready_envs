@@ -14,6 +14,17 @@ It uses a doppler.com to store sensitive data necessary to access GitHub, removi
 ```
 And feed your Doppler.com Access token. If your credentials and doppler secrets are configured as explained below your container will be read to pull and push from your github.
 
+## Testing Container Setup with Database Connection to Spring Boot App
+
+Since one of my objectives is to provide sample apps as starting templates, I included a project in the spring-boot-app-db-connection directory to test a simple Spring Boot app connected to a database.
+
+To test it, set up the container for the database (scripts for this are available here) and run the dev script. Once inside the java-ready-env container:
+
+```bash
+cd spring-boot-app-db-connection/
+mvn spring-boot:run
+```
+
 ## Testing Port Accessability
 
 Inside the container, get a Spring-Boot app and run it:  
