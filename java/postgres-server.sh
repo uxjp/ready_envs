@@ -15,7 +15,7 @@ if ! container_exists; then
   echo "Creating new container > $CONTAINER_NAME < in network > $NETWORK <"
   docker run -d --name $CONTAINER_NAME --network $NETWORK -e POSTGRES_PASSWORD=mysecretpassword postgres
 elif container_running; then
-  echo "Container already running."
+  echo "Container named $CONTAINER_NAME already running."
 elif container_exists && ! container_running; then
   echo "Container running but stop. Now starting the container..."
   docker start $CONTAINER_NAME
