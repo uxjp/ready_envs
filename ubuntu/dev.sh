@@ -3,12 +3,12 @@
 
 NAME=${1:-ubuntu-24}
 
-./auth-doppler.sh
-./build-image.sh $NAME
 
 if [ "$(docker ps -aq -f name=$NAME)" ]; then
     echo "Container with the same name detected before this script run. Consider stopping and removing the container..."
 else
+    ./auth-doppler.sh
+    ./build-image.sh $NAME
     doppler run --command="./run_container.sh $NAME $NAME"
 fi
 
