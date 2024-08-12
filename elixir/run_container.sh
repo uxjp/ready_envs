@@ -2,8 +2,9 @@
 
 CONTAINER_NAME=$1
 BASE_IMAGE=$2
+NETWORK=$3
 
-docker run -it --name $CONTAINER_NAME $BASE_IMAGE bash -c "
+docker run -it --network $NETWORK --name $CONTAINER_NAME $BASE_IMAGE bash -c "
 
   # Create the .ssh directory if it doesn't exist
   mkdir -p ~/.ssh
