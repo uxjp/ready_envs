@@ -1,5 +1,7 @@
 FROM ubuntu:24.04
 
+COPY iex_postgres app/iex_postgres
+
 RUN apt-get update && apt-get install -y \
     git \
     curl \
